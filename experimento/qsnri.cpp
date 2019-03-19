@@ -173,16 +173,18 @@ string RI( void ){
 
     clQSN QSN[R];
 
-    for ( int i = 0; i < qs*qs; i++ ) {
+    for ( int i = 0; i < pow(2, qs); i++ ) {
         stringstream str;
 
         str << fixed;
         str.precision(3);
         cout << " Iteração: " << i << endl;
+
         decToBinary(i);
         for ( int j = qs; j > 0; j-- ) {
-            D[5-j+1] = binaryNum[5-j] == 0 ? S2[5-j] : S1[5-j];
+            D[5-j+1] = binaryNum[j-1] == 0 ? S2[5-j] : S1[5-j];
         }
+        cout << endl;
 
         for( int r = 0; r < R; r++ ){
                 cout << " Calculando RI: " << r << endl;
