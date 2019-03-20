@@ -1,3 +1,10 @@
+\begin{center}
+    \chapter*{Anexo A - Códigos utilizados}
+\end{center}
+\addcontentsline{toc}{chapter}{Anexo A - Códigos utilizados}
+
+\section{QSN-RI modificado}
+\begin{lstlisting}
 //-----------------------------------------------------------------------------
 #include <iostream>
 #include <cstdlib>
@@ -194,24 +201,25 @@ string RI( void ){
                 QSN[r].Statistic(Ni);
         }
 
-        str << "R,"
-            << "QS,"
-            << "T,"
-            << "E[nq],"
-            << "E[w],"
-            << "U"
-            << "\n";
+        for( int q = 0; q < qs; q++ ){
+            str << "QS,"
+                << "T,"
+                << "E[nq],"
+                << "E[w],"
+                << "U,";
+        }
+        str << "\n";
 
         for( int r = 0; r < R; r++ ){
+            str << r+1 << ",";
             for( size_t qs = 0; qs < QSN[r].QS.size(); qs++ ){
-                str << r+1 << ","
-                    << qs << ","
+                str << qs << ","
                     << QSN[r].QS[qs].T << ","
                     << QSN[r].QS[qs].E[2] << ","
                     << QSN[r].QS[qs].E[4] << ","
-                    << QSN[r].QS[qs].U
-                    << "\n";
+                    << QSN[r].QS[qs].U << ",";
             }
+            str << "\n";
         }
 
         ofstream fo;
@@ -228,3 +236,4 @@ int main( void ){
     return 0;
 }
 //------------------------------------------------------------------------------
+\end{lstlisting}

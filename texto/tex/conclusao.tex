@@ -1,0 +1,12 @@
+%--------------------------------------------------------------------------------------
+% Este arquivo contém a sua conclusão
+%--------------------------------------------------------------------------------------
+\chapter{Conclusão}
+
+% A escolha de uma das técnicas para avaliação do desempenho de um sistema fica à cargo do projetista, que deve avaliar as vantagens e desvantagens de cada uma. Na QSN-RI, considera-se a ordem em que a tarefa visita cada componente, além do intervalo entre chegada delas. As repetições são independentes, garantindo a robustez da simulação, e, em cada repetição, o valor de $iat$ é calculado aleatoriamente, o que pode ser útil em sistemas onde não há uma constância no tempo de chegada de tarefas. Na técnica MVA, a informação da ordem dos componentes não é considerada nos cálculos. Dessa forma, o projetista precisaria ainda encontrar uma configuração ideal para o sistema. Em situações em que a ordem de visita aos componentes é bem definida, a MVA não seria ideal. Por outro lado, ela fornece a variação das métricas de acordo com o número de usuários, o que é uma grande vantagem. A partir destes resultados, é possível realizar uma análise de gargalos e determinar o número máximo de usuários que o sistema suporta.
+
+% Para o sistema computacional proposto, a ordem em que as tarefas visitam os componentes é crucial, o que torna a técnica QSN-RI mais atrativa, e possivelmente precisa, que a MVA. Por outro lado, ela não fornece o número máximo de usuários que o sistema suporta. Assim, combinar as duas técnicas mostra-se a abordagem ideal para o sistema proposto.
+
+% As duas técnicas empregadas apresentaram resultados bem similares, com pouca variação nas métricas calculadas. Ambas detectaram que o roteador, \textit{switch} e servidor foram subutilizados, em que nenhuma fila foi formada e o tempo de espera foi baixíssimo. Além do mais, o computador de mesa e \textit{notebook}, que apresentam performances 10 vezes piores que estes três componentes, apresentaram as maiores utilizações. O \textit{notebook}, por apresentar o maior tempo de serviço, foi o gargalo do sistema, apresentando valores altos para tempo de espera e número de tarefas na fila.
+
+% Através da análise de gargalos, confirmou-se o que já era visível pelos resultados da técnica MVA. O sistema apresentou uma saturação a partir de 73 usuários, com as retas da vazão e tempo de resposta apresentando os mesmos valores dos respectivos limites assintóticos.

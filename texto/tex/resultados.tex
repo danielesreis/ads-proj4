@@ -1,0 +1,380 @@
+\chapter{Resultados} \label{ch:RD}
+
+% \section{Parâmetros obtidos}
+
+% \subsection{QSN-RI}
+
+% Nas Tabelas \ref{tbl:QSN_1} e \ref{tbl:QSN_2}, são mostradas as métricas obtidas para cada componente em cada repetição da técnica QSN-RI. Nota-se que, para os componentes com as melhores métricas de performance (roteador, \textit{switch} e servidor), as utilizações foram pequenas, alcançando em torno de 10\% para o roteador, 6\% para o \textit{switch} e entre 10 e 20\% para o servidor. Para estes componentes, o número médio de tarefas na fila não chegou a 1 e o tempo médio de espera foi praticamente nulo.
+
+% \begin{table}[H]
+% \tiny
+% \centering
+% \caption{\label{tbl:QSN_1} Parâmetros obtidos para o roteador, \textit{switch} e servidor.}
+%     \begin{tabular}{c|cccccccccccc}
+%         \hline
+%         \multirow{2}{*}{r} & \multicolumn{4}{c}{Roteador} & \multicolumn{4}{c}{\textit{Switch}} & \multicolumn{4}{c}{Servidor} \\ \cline{2-13}
+%             & T & E[nq] & E[w] & U & T & E[nq] & E[w] & U & T & E[nq] & E[w] & U  \\ \hline
+%         1  & 30,269	& 0,101	& 0,000 & 0,100	 & 112,883	& 0,076	& 0,000 & 0,071 & 31,396 & 0,234 & 0,001 & 0,173 \\ \hline
+%         2  & 32,453	& 0,088	& 0,000 & 0,091	 & 120,733	& 0,077	& 0,000 & 0,069 & 31,738 & 0,168 & 0,001 & 0,163 \\ \hline
+%         3  & 32,777	& 0,106	& 0,000 & 0,088	 & 118,640	& 0,065	& 0,000 & 0,071 & 30,940 & 0,169 & 0,001 & 0,170 \\ \hline
+%         4  & 32,606	& 0,093	& 0,000 & 0,091	 & 119,247	& 0,073	& 0,000 & 0,070 & 31,487 & 0,227 & 0,001 & 0,177 \\ \hline
+%         5  & 32,659	& 0,095	& 0,000 & 0,089	 & 118,213	& 0,089	& 0,000 & 0,069 & 30,791 & 0,256 & 0,001 & 0,165 \\ \hline
+%         6  & 30,299	& 0,113	& 0,000 & 0,099	 & 119,157	& 0,071	& 0,000 & 0,068 & 30,886 & 0,219 & 0,001 & 0,183 \\ \hline
+%         7  & 30,097	& 0,116	& 0,000 & 0,098	 & 116,032	& 0,075	& 0,000 & 0,071 & 29,727 & 0,200 & 0,001 & 0,181 \\ \hline
+%         8  & 32,770	& 0,098	& 0,000 & 0,092	 & 122,486	& 0,076	& 0,000 & 0,068 & 31,522 & 0,197 & 0,001 & 0,162 \\ \hline
+%         9  & 30,337	& 0,124	& 0,000 & 0,098	 & 112,662	& 0,086	& 0,000 & 0,073 & 30,377 & 0,189 & 0,001 & 0,185 \\ \hline
+%         10 & 31,740	& 0,090	& 0,000 & 0,093	 & 120,227	& 0,071	& 0,000 & 0,068 & 32,711 & 0,212 & 0,001 & 0,158 \\ \hline
+%     \end{tabular}
+% \end{table}
+% \legend{\textbf{Fonte: } (Autor, 2019).}
+
+% Enquanto que os três componentes supracitados foram subtutilizados, o computador e \textit{notebook} apresentaram utilizações altas. Para o computador, os valores dessa métrica variaram entre 0,745 e 0,929. Devido ao \textit{outlier} na terceira repetição, a média de utilização dele foi igual a 0,8109. O \textit{notebook}, por outro lado, apresentou utilizações quase iguais a 1, indicando um possível gargalo no sistema. 
+
+% O tempo de espera foi baixo para o computador, mas ainda notou-se a presença de tarefas na fila. O \textit{notebook} alcançou os maiores valores de $E[w]$, como esperado, apresentando formação de fila com até 70 tarefas. Vê-se, portanto, que o \textit{notebook} mostrou ser um gargalo no sistema, por ser o componente com menor desempenho dentre os demais.
+
+% \begin{table}[H]
+% \centering
+% \caption{\label{tbl:QSN_2} Parâmetros obtidos para o computador e \textit{notebook}.}
+%     \begin{tabular}{c|cccccccc}
+%         \hline
+%         \multirow{2}{*}{r} & \multicolumn{4}{c}{Computador} & \multicolumn{4}{c}{\textit{Notebook}} \\ \cline{2-9}
+%         &    T   & E[nq] & E[w]  &   U    &   T       & E[nq] & E[w] & U \\ \hline
+%         1  &  2,633 & 4,200 & 0,086& 0,929 & 31,862 & 53,598 & 1,519 & 0,999 \\ \hline
+%         2  &  2,944 & 1,560 & 0,034& 0,815 & 31,548 & 8,934 & 0,226 & 0,938 \\ \hline
+%         3  &  2,885 & 3,520 & 0,079& 0,591 & 31,141 & 13,322 & 0,361 & 0,999 \\ \hline
+%         4  &  2,791 & 4,380 & 0,101& 0,856 & 32,030 & 11,017 & 0,293 & 0,967 \\ \hline
+%         5  &  3,072 & 2,430 & 0,053& 0,745 & 32,183 & 31,065 & 0,887 & 0,980 \\ \hline
+%         6  &  2,629 & 2,250 & 0,045& 0,855 & 31,446 & 12,431 & 0,320 & 0,966 \\ \hline
+%         7  &  2,640 & 2,170 & 0,044& 0,826 & 29,830 & 22,918 & 0,599 & 1,000 \\ \hline
+%         8  &  3,034 & 3,330 & 0,078& 0,841 & 33,059 & 30,060 & 0,921 & 0,999 \\ \hline
+%         9  &  2,709 & 3,810 & 0,068& 0,775 & 31,157 & 70,008 & 1,971 & 1,000 \\ \hline
+%         10 &  2,388 & 6,680 & 0,140& 0,876 & 33,563 & 7,156 & 0,186 & 0,904 \\ \hline
+%     \end{tabular}
+% \end{table}
+% \legend{\textbf{Fonte: } (Autor, 2019).}
+
+% \subsection{MVA}
+
+% Na Tabela \ref{tbl:MVA_R}, são mostrados os tempos de espera para todos os componentes, de acordo com o número de clientes. Assim como para a QSN-RI, o roteador, \textit{switch} e servidor apresentaram tempos de espera extremamente baixos. Para o computador, o tempo de espera foi até 10 vezes maior que o destes três componentes, mas ainda foi baixo. Para estes quatro componentes, nota-se que que a métrica avaliada manteve-se constante a partir de 100 tarefas. Para o \textit{notebook}, por outro lado, o tempo de espera aumentou até o 1000º cliente, alcançando até 26,4 segundos. 
+
+% \begin{table}[H]
+% \centering
+% \caption{\label{tbl:MVA_R} Tempo de espera dos componentes.}
+%     \begin{tabular}{cccccc}
+%         \hline
+%         $n$ & $R_{roteador}$ & $R_{\textit{switch}}$ & $R_{servidor}$ & $R_{computador \, de \, mesa}$ & $R_{\textit{notebook}}$ \\ \hline
+%         1  &   0,0027 &   0,002   & 0,005 & 0,0222 & 0,0284\\ \hline
+%         2  &   0,0027 &   0,002 & 0,00501 & 0,0223 & 0,0288\\ \hline
+%         3  &   0,00271 & 0,00201 & 0,00502 & 0,0224 & 0,0292\\ \hline
+%         4  &   0,00271 & 0,00201 & 0,00504 & 0,0226 & 0,0296\\ \hline
+%         5  &   0,00271 & 0,00202 & 0,00505 & 0,0227   & 0,03\\ \hline
+%         6  &   0,00272 & 0,00202 & 0,00506 & 0,0228 & 0,0305\\ \hline
+%         7  &   0,00272 & 0,00203 & 0,00507 & 0,0229 & 0,0309\\ \hline
+%         8  &   0,00273 & 0,00203 & 0,00509 & 0,0231 & 0,0314\\ \hline
+%         9  &   0,00273 & 0,00204  & 0,0051 & 0,0232 & 0,0319\\ \hline
+%         10  &  0,00273 & 0,00204 & 0,00511 & 0,0233 & 0,0324\\ \hline
+%         50  &  0,00288 & 0,00226 & 0,00566 & 0,0299 & 0,0789\\ \hline
+%         100  & 0,00298 & 0,00243 & 0,00607 & 0,0364  & 0,807\\ \hline
+%         200  & 0,00298 & 0,00243 & 0,00607 & 0,0364   & 3,65\\ \hline
+%         300  & 0,00298 & 0,00243 & 0,00607 & 0,0364   & 6,49\\ \hline
+%         400  & 0,00298 & 0,00243 & 0,00607 & 0,0364   & 9,33\\ \hline
+%         500  & 0,00298 & 0,00243 & 0,00607 & 0,0364   & 12,2\\ \hline
+%         600  & 0,00298 & 0,00243 & 0,00607 & 0,0364     & 15\\ \hline
+%         700  & 0,00298 & 0,00243 & 0,00607 & 0,0364   & 17,8\\ \hline
+%         800  & 0,00298 & 0,00243 & 0,00607 & 0,0364   & 20,7\\ \hline
+%         900  & 0,00298 & 0,00243 & 0,00607 & 0,0364   & 23,5\\ \hline
+%         1000 & 0,00298 & 0,00243 & 0,00607 & 0,0364   & 26,4 \\ \hline
+%     \end{tabular}
+% \end{table}
+% \legend{\textbf{Fonte: } (Autor, 2019).}
+
+% Para a métrica tamanho da fila, cujos resultados são mostrados na Tabela \ref{tbl:MVA_Q}, nota-se um comportamento semelhante que o observado para o tempo de espera. Para o roteador, \textit{switch}, servidor e computador de mesa, o tamanho da fila não foi maior que 1 e seu valor estagnou a partir do 100º cliente. O \textit{notebook}, como esperado, apresentou um tamanho de fila crescente, alcançando até 928 tarefas em fila na última iteração do algoritmo. Nota-se que através desta técnica também foi obtido que o \textit{notebook} é o gargalo do sistema.
+
+% \begin{table}[H]
+% \centering
+% \caption{\label{tbl:MVA_Q} Tamanho da fila.}
+%     \begin{tabular}{cccccc}
+%         \hline
+%         $n$ & $Q_{roteador}$ & $Q_{\textit{switch}}$ & $Q_{servidor}$ & $Q_{computador \, de \, mesa}$ & $Q_\textit{notebook}$ \\ \hline
+%         1 & 0,00132  & 0,00244 & 0,00244 & 0,00541 & 0,0138 \\ \hline
+%         2 & 0,00263  & 0,00488 & 0,00488 &  0,0109 & 0,0281 \\ \hline
+%         3 & 0,00396  & 0,00734 & 0,00734 &  0,0164 & 0,0427 \\ \hline
+%         4 & 0,00528  & 0,00981 & 0,00981 &   0,022 & 0,0577 \\ \hline
+%         5 & 0,00661  &  0,0123 &  0,0123 &  0,0276 & 0,0731 \\ \hline
+%         6 & 0,00794  &  0,0148 &  0,0148 &  0,0333 &  0,089 \\ \hline
+%         7 & 0,00927  &  0,0173 &  0,0173 &  0,0391 &  0,105 \\ \hline
+%         8 & 0,0106  &  0,0198 &  0,0198 &  0,0449 &  0,122 \\ \hline
+%         9 & 0,0119  &  0,0223 &  0,0223 &  0,0508 &  0,139 \\ \hline
+%         10 & 0,0133  &  0,0248 &  0,0248 &  0,0567 &  0,157 \\ \hline
+%         50 & 0,0683  &   0,134 &   0,134 &   0,354 &   1,87 \\ \hline
+%         100 & 0,105  &   0,214 &   0,214 &   0,641 &   28,4 \\ \hline
+%         200 & 0,105  &   0,214 &   0,214 &   0,642 &    128 \\ \hline
+%         300 & 0,105  &   0,214 &   0,214 &   0,642 &    228 \\ \hline
+%         400 & 0,105  &   0,214 &   0,214 &   0,642 &    328 \\ \hline
+%         500 & 0,105  &   0,214 &   0,214 &   0,642 &    428 \\ \hline
+%         600 & 0,105  &   0,214 &   0,214 &   0,642 &    528 \\ \hline
+%         700 & 0,105  &   0,214 &   0,214 &   0,642 &    628 \\ \hline
+%         800 & 0,105  &   0,214 &   0,214 &   0,642 &    728 \\ \hline
+%         900 & 0,105  &   0,214 &   0,214 &   0,642 &    828 \\ \hline
+%         1000 & 0,105  &   0,214 &   0,214 &   0,642 &    928 \\ \hline
+%     \end{tabular}
+% \end{table}
+% \legend{\textbf{Fonte: } (Autor, 2019).}
+
+% Por fim, é mostrada a utilização dos componentes na Tabela \ref{tbl:MVA_U}. A utilização do roteador alcançou um valor similar ao obtido para a QSN-RI, sendo igual a 9,51\% a partir da 100ª tarefa. Por outro lado, o \textit{switch} apresentou uma utilização maior através da MVA do que pela QSN-RI, alcançando uma utilização igual a 17,6\%. O servidor apresentou os mesmos valores que o \textit{switch}, estando na mesma faixa de valores obtidos pela QSN-RI.
+
+% O computador de mesa apresentou valores de utilização muito menores que os obtidos pela QSN-RI, mal chegando a 40\% na última iteração. Ademais, o \textit{notebook} apresentou valores de $U$ muito próximos de 100\%, assim como visto na técnica QSN-RI, antes mesmo da 100ª tarefa.
+
+% \begin{table}[H]
+% \centering
+% \caption{\label{tbl:MVA_U} Utilização dos componentes.}
+%     \begin{tabular}{cccccc}
+%         \hline
+%         $n$ & $U_{roteador}$ & $U_{\textit{switch}}$ & $U_{servidor}$ & $U_{computador \, de \, mesa}$ & $U_\textit{notebook}$ \\ \hline
+%         1  & 0,00131 &  0,00243 &  0,00243 &  0,00538 & 0,0136 \\ \hline
+%         2  & 0,00263 &  0,00486 &  0,00486  &  0,0108 & 0,0273 \\ \hline
+%         3  & 0,00394 &  0,00729 &  0,00729  &  0,0161 & 0,0409 \\ \hline
+%         4  & 0,00525 &  0,00971 &  0,00971  &  0,0215 & 0,0545 \\ \hline
+%         5  & 0,00656  &  0,0121  &  0,0121  &  0,0269 & 0,0681 \\ \hline
+%         6  & 0,00787  &  0,0146  &  0,0146  &  0,0322 & 0,0817 \\ \hline
+%         7  & 0,00918   &  0,017   &  0,017  &  0,0376 & 0,0953 \\ \hline
+%         8  & 0,0105  &  0,0194  &  0,0194   &  0,043  & 0,109 \\ \hline
+%         9  & 0,0118  &  0,0218  &  0,0218  &  0,0483  & 0,122 \\ \hline
+%         10  & 0,0131  &  0,0242  &  0,0242  &  0,0537  & 0,136 \\ \hline
+%         50  & 0,064   &  0,118   &  0,118   &  0,262  & 0,652 \\ \hline
+%         100  & 0,095   &  0,176   &  0,176   &  0,391  & 0,966 \\ \hline
+%         200  & 0,0951   &  0,176   &  0,176   &  0,391  & 0,992 \\ \hline
+%         300  & 0,0951   &  0,176   &  0,176   &  0,391  & 0,996 \\ \hline
+%         400  & 0,0951   &  0,176   &  0,176   &  0,391  & 0,997 \\ \hline
+%         500  & 0,0951   &  0,176   &  0,176   &  0,391  & 0,998 \\ \hline
+%         600  & 0,0951   &  0,176   &  0,176   &  0,391  & 0,998 \\ \hline
+%         700  & 0,0951   &  0,176   &  0,176   &  0,391  & 0,998 \\ \hline
+%         800  & 0,0951   &  0,176   &  0,176   &  0,391  & 0,999 \\ \hline
+%         900  & 0,0951   &  0,176   &  0,176   &  0,391  & 0,999 \\ \hline
+%         1000  & 0,0951   &  0,176   &  0,176   &  0,391  & 0,999 \\ \hline
+%     \end{tabular}
+% \end{table}
+% \legend{\textbf{Fonte: } (Autor, 2019).}
+
+% Através dos dois algoritmos, notou-se que o \textit{notebook} foi o gargalo do sistema, ocasionando a formação de fila no sistema devido ao seu menor tempo de serviço. Na próxima seção, será feita a análise de gargalos através da técnica MVA.
+
+% \section{Análise de gargalos}
+
+% Para a análise de gargalos em um sistema, avalia-se a variação da vazão e tempo de resposta de acordo com o número de clientes. Traçam-se duas assíntotas para cada gráfico, representando os limites das respectivas métricas, e, a partir da intersecção delas obtém-se o joelho. Através do número de tarefas neste ponto, determina-se a existência de uma fila no sistema.
+
+% Para o tempo de espera, tem-se que as assíntotas são iguais a $D$, que consiste na soma das demandas de cada componente, e a uma reta com inclinação $D_max$ e deslocamento igual a -Z. O cálculo das assíntotas é mostrado a seguir:
+
+% \begin{equation*}
+%     D = \sum_{i=0}^4 D_i = 0,1044
+% \end{equation*}
+    
+% \begin{equation*}
+%     y = -Z + D_{max}*x
+% \end{equation*}
+% \begin{equation*}
+%     y = -4 + 0,0284*2*x
+% \end{equation*}
+
+% Em que $D_{max}$ é igual a 0,0284, o tempo de serviço \textit{notebook}, vezes 2, que consiste no número de visitas à este componente. O gráfico da variação de $R_\textit{notebook}$ de acordo com o número de tarefas é mostrado na Figura \ref{img:R_n}, assim como as assíntotas calculadas e o joelho.
+
+% % \begin{figure}[H]
+% %     \centering
+% %         \caption{\label{img:R_n} Variação do tempo de espera em relação ao número de clientes.}
+% %         \includegraphics[scale=0.2]{img/R_n.png}
+% %         \legend{\textbf{Fonte: } (Autor, 2019).}
+% % \end{figure}
+
+% Nota-se que a curva para R está colada na assíntota $Dmax$ e está muito longe da assíntota D, indicando uma saturação do sistema bem no começo do experimento, como visto na seção anterior. Esta conclusão pode ser tomada também a partir da vazão do sistema. As assíntotas para esta métrica são $1/D_{max}$ e $1/(D+Z)$, calculadas a partir das equações a seguir:
+
+% \begin{equation*}
+%     \frac{1}{D_{max}} = \frac{1}{0,0284*2} = 17,6056
+% \end{equation*}
+
+% \begin{equation*}
+%     y = \frac{1}{D+Z}*x
+% \end{equation*}
+% \begin{equation*}
+%     y = \frac{1}{0,1044+4}*x
+% \end{equation*}
+% \begin{equation*}
+%     y = 0.2482*x
+% \end{equation*}
+
+% Na Figura \ref{img:X_n}, é mostrado o gráfico para a vazão do sistema, com as duas assíntotas e joelho plotados. Nota-se como a vazão assume os mesmos valores que a assíntota em $1/Dmax$, confirmando o gargalo no sistema.
+
+% % \begin{figure}[H]
+% %     \centering
+% %         \caption{\label{img:X_n} Variação da vazão em relação ao número de clientes.}
+% %         \includegraphics[scale=0.2]{img/X_n.png}
+% %         \legend{\textbf{Fonte: } (Autor, 2019).}
+% % \end{figure}
+
+% Para determinar em que tarefa exatamente iniciou a estrangulação do sistema, utiliza-se a fórmula a seguir, obtida a partir da intersecção das retas, ou joelho:
+
+% \begin{equation*}
+%     N_J = \frac{D+Z}{D_{max}}
+% \end{equation*}
+
+% Ao substituir os valores correspondentes, obtemos:
+
+% \begin{equation*}
+%     N_J = \frac{0,1044+4}{0,0284*2} = 72,26
+% \end{equation*}
+
+% Este valor está de acordo com as Tabelas \ref{tbl:MVA_Q}, \ref{tbl:MVA_R} e \ref{tbl:MVA_U}, onde notava-se uma piora nas métricas entre 50 e 100 números de usuários. 
+
+% \section{Seção de exemplo 1 - Códigos} \label{sec:resex1}
+
+% \subsection{Subseção de exemplo 1 - Inserindo trechos de códigos}
+ 
+% O nosso querido Leonardo Cavalcante providenciou um comando que deixa nossos trechos de códigos bonitinhos e gera um elemento pré-textual de Lista de Códigos. 
+
+% Os códigos são adicionados através do comando seguinte:
+
+% \textbackslash sourcecode\{ Descrição \}\{Label\}\{Linguagem\}\{Arquivo com extensão\}
+
+% Um exemplo pode ser visto no código \ref{cmd:cron} abaixo.
+
+% \sourcecode{Configuração do intervalo de execução no Script Agendador}{cron}{javascript}{cron.js}
+
+
+% \section{Seção de exemplo 2 - Listas} \label{sec:resex2}
+
+% \subsection{Subseção de exemplo 2 - Lista de itens} 
+
+% Existem alguns tipos de listas no Latex, iremos exemplificar a lista sem numeração (seção \ref{subsubsec:itemize}), a lista enumerada (seção \ref{subsubsec:enumerate}) e a lista mista (seção \ref{subsubsec:mista}). As listas podem ser encadeadas de diversas maneiras,
+% de acordo com a necessidade do autor.
+
+% \subsubsection{Subsubseção de exemplo 1 - Lista sem numeração} \label{subsubsec:itemize}
+
+% Este é um exemplo de lista sem numeração.
+
+% \begin{itemize}
+% 	\item \textbf{Cadastrar usuário}
+
+% 		\begin{itemize}
+%     		\item Atores
+% 		    	\begin{itemize}
+%     		    	\item Usuário
+% 		    	\end{itemize}
+
+% 	    	\item Fluxo de eventos primário
+% 			    \begin{itemize}
+% 	    		    \item o usuário deve se cadastrar informando seu nome, \textit{e-mail} e senha;
+% 		        	\item a API armazena os dados do usuário;
+% 		    	    \item o usuário é liberado para realizar o \textit{login}.
+% 			    \end{itemize}
+
+%     		\item Fluxo alternativo
+% 			    \begin{itemize}
+% 		    	   \item o usuário desiste de se cadastrar e cancela o caso de uso clicando no botão voltar.
+% 	    		\end{itemize}
+
+% 		\end{itemize}
+	
+% \end{itemize}
+
+% \subsubsection{Subsubseção de exemplo 2 - Lista enumerada} \label{subsubsec:enumerate}
+
+% Este é um exemplo de lista enumerada.
+
+% \begin{enumerate}
+% 	\item O Usuário deseja ver o histórico das variáveis climáticas, então através da interface de usuário escolhe o período ao qual o histórico se refere;
+% 	\item A aplicação solicita à API através de uma requisição HTTP contendo o momento de início e o momento do fim do período em seus parâmetros;     			\item A API recebe a solicitação e se comunica com a base de dados, então requere as informações quem possuem a data de leitura no intervalo escolhido;
+% 	\item A base de dados retorna os dados em formato Json para a API;
+% 	\item A API responde à requisição retornando os dados, também em formato Json, para a aplicação cliente;
+% 	\item A aplicação cliente renderiza os gráficos utilizando o conjunto de dados obtidos.
+% \end{enumerate}
+
+% \subsubsection{Subsubseção de exemplo 3 - Lista mista} \label{subsubsec:mista}
+
+% Este é um exemplo de lista mista.
+
+% \begin{itemize}
+% 	\item \textbf{Cadastrar usuário}
+
+% 		\begin{itemize}
+%     		\item Atores
+% 		    	\begin{itemize}
+%     		    	\item Usuário
+% 		    	\end{itemize}
+
+% 	    	\item Fluxo de eventos primário
+% 			    \begin{enumerate}
+% 	    		    \item o usuário deve se cadastrar informando seu nome, \textit{e-mail} e senha;
+% 		        	\item a API armazena os dados do usuário;
+% 		    	    \item o usuário é liberado para realizar o \textit{login}.
+% 			    \end{enumerate}
+
+%     		\item Fluxo alternativo
+% 			    \begin{itemize}
+% 		    	   \item o usuário desiste de se cadastrar e cancela o caso de uso clicando no botão voltar.
+% 	    		\end{itemize}
+
+% 		\end{itemize}
+
+% 	\item \textbf{Visualizar dados atuais}
+
+% 		\begin{itemize}
+% 		    \item Atores
+% 	    		\begin{itemize}
+% 		    	    \item Usuário
+% 			    \end{itemize}
+    
+% 	    	\item Pré-condições
+% 			    \begin{itemize}
+% 		     	   \item o usuário deve estar autenticado
+% 			    \end{itemize}
+
+% 	    	\item Fluxo de eventos primário
+% 			    \begin{enumerate}
+% 		    	    \item o usuário deve efetuar o \textit{login} informando o \textit{e-mail} e a senha;
+% 	    		    \item caso o usuário não seja autenticado, o sistema informa a respeito de credenciais inválidas e encerra o caso de uso;
+% 		    	    \item a API autentica o usuário;
+%     			    \item o usuário é liberado para visualizar os dados atuais dos sensores da estação;
+% 		        	\item após a visualização o usuário pode finalizar o caso de uso ou efetuar uma nova consulta se desejar.
+% 			    \end{enumerate}
+
+%     		\item Fluxo alternativo
+% 			    \begin{itemize}
+%     			   \item o usuário desiste de visualizar os dados atuais e cancela o caso de uso clicando no botão voltar.
+% 			    \end{itemize}
+
+% 		\end{itemize}
+
+% 	\item \textbf{Visualizar histórico}
+
+% 		\begin{itemize}
+% 		    \item Atores
+% 	    		\begin{itemize}
+% 		    	    \item Usuário
+% 	    		\end{itemize}
+
+% 	    	\item Pré-condições
+%     			\begin{itemize}
+% 			        \item o usuário deve estar autenticado
+% 			    \end{itemize}
+
+% 		    \item Fluxo de eventos primário
+% 			    \begin{enumerate}
+% 			        \item o usuário deve efetuar o \textit{login} informando o \textit{e-mail} e a senha;
+% 			        \item caso o usuário não seja autenticado, o sistema informa a respeito de credenciais inválidas e encerra o caso de uso;
+% 			        \item a API autentica o usuário;
+% 			        \item o usuário é liberado para escolher qual período cujo histórico será exibido;
+% 			        \item o usuário seleciona as variáveis a serem exibidas no gráficos de linhas;
+% 			        \item após a visualização do histórico o usuário pode finalizar o caso de uso se desejar.
+% 			    \end{enumerate}
+
+% 		    \item Fluxo alternativo
+% 			    \begin{enumerate}
+% 			        \item após a escolha do período de exibição do histórico o usuário pode voltar para a tela anterior e escolher um novo período;
+% 			        \item o histórico é exibido para o usuário;
+% 			        \item após a visualização do histórico o usuário pode finalizar o caso de uso ou efetuar uma nova consulta se desejar.
+% 			    \end{enumerate}
+
+% 		    \item Fluxo alternativo
+% 			    \begin{enumerate}
+% 			        \item o usuário desiste de visualizar o histórico e cancela o caso de uso clicando no botão voltar.
+% 			    \end{enumerate}
+% 		\end{itemize}
+% \end{itemize}
